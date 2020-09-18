@@ -14,7 +14,7 @@ const (
 	headerContentType = "Content-Type"
 )
 
-func writeJSON(w http.ResponseWriter, code int, data interface{}) {
+func WriteJSON(w http.ResponseWriter, code int, data interface{}) {
 	response, _ := json.Marshal(data)
 
 	w.Header().Add("content-type", "application/json")
@@ -22,7 +22,7 @@ func writeJSON(w http.ResponseWriter, code int, data interface{}) {
 	w.Write(response)
 }
 
-func writeErrJSON(w http.ResponseWriter, err error) {
+func WriteErrJSON(w http.ResponseWriter, err error) {
 	var code int
 	errorType := errors.GetType(err)
 
@@ -69,7 +69,7 @@ func writeErrJSON(w http.ResponseWriter, err error) {
 	writeJSON(w, code, errorMap)
 }
 
-func writeJSONAPI(w http.ResponseWriter, code int, data interface{}) {
+func WriteJSONAPI(w http.ResponseWriter, code int, data interface{}) {
 	jsonapiRuntime := jsonapi.NewRuntime()
 
 	w.Header().Set(headerContentType, jsonapi.MediaType)
@@ -81,7 +81,7 @@ func writeJSONAPI(w http.ResponseWriter, code int, data interface{}) {
 	}
 }
 
-func writeErrJSONAPI(w http.ResponseWriter, err error) {
+func WriteErrJSONAPI(w http.ResponseWriter, err error) {
 	var code int
 	errorType := errors.GetType(err)
 
