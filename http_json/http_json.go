@@ -66,7 +66,7 @@ func WriteErrJSON(w http.ResponseWriter, err error) {
 		errorMap["context"] = errorContext
 	}
 
-	writeJSON(w, code, errorMap)
+	WriteJSON(w, code, errorMap)
 }
 
 func WriteJSONAPI(w http.ResponseWriter, code int, data interface{}) {
