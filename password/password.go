@@ -7,13 +7,13 @@ import (
 type password struct{}
 
 // PasswordSvc --
-type PasswordSvc interface {
+type Service interface {
 	Hash(password string) (string, error)
 	CheckPassword(password, hash string) error
 }
 
 // NewPasswordSvc creates a new fake password
-func NewPasswordSvc() PasswordSvc {
+func NewService() Service {
 	return &password{}
 }
 
