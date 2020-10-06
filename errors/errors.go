@@ -55,6 +55,7 @@ func (errorType ErrorType) New(msg string) error {
 func (errorType ErrorType) Newf(msg string, args ...interface{}) error {
 	errMsg := fmt.Errorf(msg, args...)
 	errDetail := fmt.Errorf("")
+
 	return customError{errorType: errorType, message: errMsg, detail: errDetail}
 }
 
@@ -67,6 +68,7 @@ func (errorType ErrorType) Wrap(err error, msg string) error {
 func (errorType ErrorType) Wrapf(err error, msg string, args ...interface{}) error {
 	errMsg := fmt.Errorf(msg, args...)
 	errDetail := errors.Wrap(err, errMsg.Error())
+
 	return customError{errorType: errorType, message: errMsg, detail: errDetail}
 }
 
@@ -84,6 +86,7 @@ func New(msg string) error {
 func Newf(msg string, args ...interface{}) error {
 	errMsg := fmt.Errorf(msg, args...)
 	errDetail := fmt.Errorf("")
+
 	return customError{errorType: NoType, message: errMsg, detail: errDetail}
 }
 

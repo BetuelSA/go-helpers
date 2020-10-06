@@ -20,6 +20,7 @@ func NewPasswordSvc() PasswordSvc {
 // Hash returns the hash for a password
 func (p *password) Hash(password string) (string, error) {
 	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+
 	return string(hash), err
 }
 

@@ -71,7 +71,6 @@ func WriteErrJSON(w http.ResponseWriter, err error) {
 
 func WriteJSONAPI(w http.ResponseWriter, code int, data interface{}) {
 	jsonapiRuntime := jsonapi.NewRuntime()
-
 	w.Header().Set(headerContentType, jsonapi.MediaType)
 	w.WriteHeader(code)
 

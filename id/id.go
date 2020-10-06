@@ -19,5 +19,6 @@ func StringToID(s string) (ID, error) {
 	if err != nil {
 		return uuid.Nil, errors.BadRequest.Wrapf(err, "invalid ID")
 	}
+
 	return ID(id), nil
 }
