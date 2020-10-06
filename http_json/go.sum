@@ -1,0 +1,6 @@
+github.com/BetuelSA/go-helpers/errors v0.0.0-20201004175648-6a96ce83dda3 h1:I7yRO3UTzWyLI6sPf5jZ03d4G0ZmqDCCSO3h29M3ubM=
+github.com/BetuelSA/go-helpers/errors v0.0.0-20201004175648-6a96ce83dda3/go.mod h1:YCl6YrIIhEP269TzyIpDiMRF51eXyiIpwE/7um999TI=
+github.com/google/jsonapi v0.0.0-20200825183604-3e3da1210d0c h1:p2sf7ppyG09K/Er1FeLSDeSjaEvsycQSdTB/il3JhCc=
+github.com/google/jsonapi v0.0.0-20200825183604-3e3da1210d0c/go.mod h1:XSx4m2SziAqk9DXY9nz659easTq4q6TyrpYd9tHSm0g=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
